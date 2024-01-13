@@ -1,0 +1,130 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+body{
+    background-color:#301E67;
+}
+h1 {
+    color: #830dd1 ;
+    font-size: 6rem;
+    text-shadow: #03c2e4 4px 4px 3px;
+    margin: 20px;
+}
+.outerbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap :15px;
+    align-items: center;
+    background-color: #070A52;
+    width: 700px;
+    height: auto;
+    margin-bottom: 20px;
+    height: auto;
+    
+}
+.whole-watch {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+.watch {
+    width: 650px;
+    height: 320px;
+    background-color: black;
+       display: flex;
+       color: aqua;
+       font-weight: 900;
+       font-size: 7rem;
+       justify-content: center;
+       align-items: center;
+       margin-top: 20px;
+}
+#play,#pause,#resume,#reset,#lapbtn{
+    background-color: #5B8FB9;
+    color: #220E24;
+    font-weight: 900;
+    font-size: 2em;
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 8%;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+#pause,#resume,#reset,#lapbtn{
+    display: none;
+}
+
+footer > div {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    
+    background-color: #301E67;
+    color: cornflowerblue;
+    font-size: 14pt;
+}
+
+
+/* lap code */
+.laps{
+    width: 700px;
+    font-size: 2rem;
+    overflow-inline:hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.laps > div {
+    display: flex;
+    justify-content:center;
+    /* border: 1px solid #4511e2; */
+    background-color: #4c398a;
+    width:500px;
+     box-shadow: black 3px 3px 3px;
+    margin: 10px;
+    border-radius: 2%;
+    gap: 10px;
+   
+}
+.lap-time{
+    color: #03c2e4;
+}
+.lap-no,.lap-time{
+   display: none;
+    
+}
+
+@media (max-width:768px) {
+    .outerbox{
+        background-color: #301E67;
+       width: 100%; 
+       box-shadow: black 3px 3px 3px;
+    }
+    h1{
+        font-size: 4rem;
+    }
+    .watch{
+        background-color: black;
+        width: 90%;
+        height: 200px;
+        font-size: 4rem;
+    }
+    footer > div {
+        flex-direction: column;
+        align-items: center;
+    }
+    body {
+        background-color: #301E67;
+    }
+    .btn {
+        gap: 10px;
+    }
+}
