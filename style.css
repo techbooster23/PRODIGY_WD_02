@@ -79,7 +79,7 @@ footer > div {
     font-size: 2rem;
     overflow-inline:hidden;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
 }
 .laps > div {
