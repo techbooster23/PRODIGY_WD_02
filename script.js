@@ -34,7 +34,7 @@ pausebtn.addEventListener("click",() =>{
 resumebtn.addEventListener("click",() => {
         play = true;
         displayBlock(pausebtn);
-        displayNone(resetbtn); 
+        displayNone(resumebtn); 
 });
 resetbtn.addEventListener("click",() => {
     window.location.reload(); 
