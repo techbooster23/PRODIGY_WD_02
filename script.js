@@ -34,7 +34,7 @@ pausebtn.addEventListener("click",() =>{
 resumebtn.addEventListener("click",() => {
         play = true;
         displayBlock(pausebtn);
-        displayNone(resetbtn); 
+        displayNone(resumebtn); 
 });
 resetbtn.addEventListener("click",() => {
     window.location.reload(); 
@@ -44,7 +44,7 @@ lapbtn.addEventListener("click",() => {
         alert("you reached the max lap limit");
     }
      displayBlock(totalLaps[lapCount]);
-    lapTimes[lapCount] .style.display="flex";
+    lapTimes[lapCount] .style.display="block";
     totalLaps[lapCount].innerText = `🚩`;
     lapTimes[lapCount].innerText = `${m-1}:${s-1}:${mS-1}`;
     lapCount ++;
