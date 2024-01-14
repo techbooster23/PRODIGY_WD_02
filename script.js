@@ -13,9 +13,12 @@ let s = 1; // for sec
 let mS = 0; // for milli-sec
 let lapCount = 0;
 let play = false;
-
+let stopWatchAudio = new Audio("./assets/WatchSound.wav");
+let lapDoneAudio = new Audio("./assets/lapSound.wav");
 playbtn.addEventListener("click",() =>{
       play = true;
+      playAudio(stopWatchAudio);
+      stopWatchAudio.loop = true ;
       displayBlock(pausebtn);
       displayBlock(resetbtn);
       displayBlock(lapbtn);
@@ -26,12 +29,15 @@ playbtn.addEventListener("click",() =>{
 });
 
 pausebtn.addEventListener("click",() =>{
+    pauseAudio(stopWatchAudio);
     displayNone(pausebtn); 
      displayBlock(resumebtn);
      play = false ;
 });
 
 resumebtn.addEventListener("click",() => {
+     playAudio(stopWatchAudio);
+     stopWatchAudio.loop = true ;
         play = true;
         displayBlock(pausebtn);
         displayNone(resumebtn); 
@@ -40,6 +46,7 @@ resetbtn.addEventListener("click",() => {
     window.location.reload(); 
 });
 lapbtn.addEventListener("click",() => {
+    playAudio(lapDoneAudio);
     if (lapCount === 10) {
         alert("you reached the max lap limit");
     }
@@ -94,5 +101,12 @@ const displayNone = (htmlElement) =>{
 
 const displayBlock = (htmlElement) =>{
     htmlElement.style.display = "block";
+}
+
+let playAudio = (audio) => {
+      audio.play();
+}
+let pauseAudio = (audio) => {
+    audio.pause();
 }
 
